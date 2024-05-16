@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
-    <script src="app.js"></script>
+
+    <!-- REFERENCING BOOTSTRAP, JS/JQUERY & CSS File -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-
+    
 <!-- Title -->
     <div id="title">
         <h1>Tic Tac Toe</h1>
     </div>
-
     <br>
-    <h3 class="playerTurn">Player <span id="currentPlayer"></span> Turn</h3>
 
-
+<!-- Display Game Board-->
     <div id="board">
         <div class="square" id="square0"></div>
         <div class="square" id="square1"></div>
@@ -32,13 +36,22 @@
         <div class="square" id="square8"></div>
     </div>
 
-    
-    <h2 class="game-status">Player 1 Wins!</h2>
-
-
-    <div id="endGame">
-        <input type="button" value="Restart" id="restartButton" onclick="restartButton()" />
+<!-- Display Player Turn -->
+    <div id="playerTurn">
+        <h3>Player's Turn: <span id="currentPlayer"></span></h3>
     </div>
+
+<!-- Display End Message & Restart Button -->
+    <div id="endGame">
+        <h2 id="endMessage"></h2>
+        <input type="button" value="Restart" id="restartButton" />
+    </div>
+
+
+
+<!--LINKING TO JAVASCRIPT-->
+<script src="index.js"></script>
+
 
 </body>
 </html>
